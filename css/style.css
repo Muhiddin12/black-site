@@ -83,13 +83,19 @@ h6 {
 
 .wrapper {
   background: #000;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: space-between; */
+  max-width: 1350px;
   min-height: 100vh;
 }
 
+.test {
+  position: absolute;
+  top: 30px;
+  font-size: 20px;
+  color: #fff;
+}
 
 /* Head section */
 
