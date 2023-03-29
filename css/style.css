@@ -57,10 +57,10 @@ button:-moz-focus-innesr {
   padding: 0;
   border: 0;
 }
-/* a,
+a,
 a:visited {
   text-decoration: none;
-} */
+}
 a:hover {
   text-decoration: none;
 }
@@ -83,50 +83,82 @@ h6 {
 
 .wrapper {
   background: #000;
-  /* display: flex;
+  /* display: flex; */
   flex-direction: column;
-  justify-content: space-between; */
-  max-width: 1350px;
+  justify-content: space-between;
+  /* max-width: 1368px; */
   min-height: 100vh;
+  margin: 0 auto;
 }
 
-.test {
-  position: absolute;
-  top: 30px;
-  font-size: 20px;
-  color: #fff;
+.container {
+  /* margin: 0 9.79%; */
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 100px;
 }
+
 
 /* Head section */
+
+
+.header {
+  max-width: 1300px;
+  display: flex;
+  justify-content: space-between;
+}
 
 .head {
   width: 100%;
   display: flex;
-  justify-content: center;
-  padding: 20px;
+  justify-content: space-between;
+  padding: 20px 0;
 }
 
-.container {
-  margin: 0 auto;
-  display: flex;
-  width: 1100px;
-  align-items: center;
+.head__burger {
+  width: 60px;
+  display: none;
+}
+
+.head__burger img {
+  width: 50px;
+}
+
+@media (max-width: 950px) {
+
+  .head__burger {
+    width: 60px;
+    display: block;
+    cursor: pointer;
+  }
 }
 
 .ottakars {
   color: white;
   font-size: 32px;
+  width: 10%;
+  cursor: pointer;
 }
 
 .head__box {
-  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  gap: 45px;
+  margin: 0;
+}
+
+@media (max-width: 950px) {
+
+  .head__box {
+    display: none;
+  }
 }
 
 .head__box ul {
-  margin-left: 200px;
   padding: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   width: 100%;
   gap: 45px;
 }
@@ -134,6 +166,7 @@ h6 {
 .head__box ul li {
   font-size: 22px;
   color: white;
+  cursor: pointer;
 }
  
 .btn {
@@ -142,6 +175,7 @@ h6 {
   font-size: 25px;
   background: #6AC9B3;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 
@@ -150,10 +184,33 @@ h6 {
 
 
 .hello {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 500px);
+  gap: 96px;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+  /* width: 100%; */
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 0;
+  }
+}
+
+.cont2 {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin: 100px 0;
+  margin: 0 auto;
+}
+
+.hello__left {
+  max-width: 500px;
+}
+
+.hello__right {
+  max-width: 500px;
 }
 
 .hello__title p {
@@ -175,6 +232,7 @@ h6 {
   display: flex;
   align-items: center;
   margin-top: 70px;
+  cursor: pointer;
 }
 
 .hello__btn {
@@ -195,6 +253,7 @@ h6 {
 
 .hello__right img {
   width: 500px;
+  border-radius: 8px;
 }
 
 
@@ -208,11 +267,6 @@ h6 {
   padding: 70px 0 50px;
 }
 
-.cont {
-  margin: 0 auto;
-  width: 1100px;
-}
-
 .experiences__title {
   font-size: 40px;
   color: white;
@@ -222,14 +276,19 @@ h6 {
 
 .experiences__cards {
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  gap: 24px;
+  overflow-x: auto;
+}
+
+.experiences__cards::-webkit-scrollbar { 
+  width: 0;
 }
 
 .experiences__card {
   padding: 40px 70px;
   border: 2px solid #6AC9B3;
   border-radius: 0 15px 0 0;
+  max-width: 240px;
 }
 
 .experiences__card h3 {
@@ -264,9 +323,11 @@ h6 {
 }
 
 .what__in {
-  width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 345px);
   gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
 .what__card {
@@ -277,6 +338,7 @@ h6 {
   gap: 25px;
   padding: 20px;
   background: #161616;
+  max-width: 346px;
 }
 
 .what__card img {
@@ -302,6 +364,7 @@ h6 {
   gap: 20px;
   padding: 20px;
   background: #6AC9B3;
+  max-width: 346px;
 }
 
 .what__card2-title {
@@ -324,9 +387,11 @@ h6 {
 /* mywork section */
 
 
-.middle {
+.mywork {
+  display: flex;
+  align-items: center;  
   flex-direction: column;
-}
+} 
 
 .mywork__title {
   text-align: center;
@@ -337,7 +402,10 @@ h6 {
 
 .mywork__middle {
   display: flex;
-  margin-right: 12%;
+  width: 550px;
+  /* justify-content: center; */
+  /* margin-right: 12%; */
+  /* margin-left: 10%; */
   gap: 30px;
 }
 
@@ -470,7 +538,7 @@ h6 {
 
 .whay__cursor {
   position: absolute;
-  right: 330px;
+  right: 30%;
   top: -7px;
   height: 24px;
   width: 10px;
@@ -497,7 +565,7 @@ h6 {
 
 .whay__cursor1 {
   position: absolute;
-  right: 380px;
+  right: 35%;
   top: -7px;
   height: 24px;
   width: 10px;
@@ -524,7 +592,7 @@ h6 {
 
 .whay__cursor2 {
   position: absolute;
-  right: 490px;
+  right: 45%;
   top: -7px;
   height: 24px;
   width: 10px;
@@ -551,9 +619,11 @@ h6 {
 }
 
 .choos__in {
-  width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 335px);
   gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
 .choos__card {
@@ -564,6 +634,7 @@ h6 {
   gap: 25px;
   padding: 20px;
   background: #161616;
+  max-width: 336px;
 }
 
 .choos__card img {
@@ -590,6 +661,7 @@ h6 {
   gap: 20px;
   padding: 20px;
   background: #6AC9B3;
+  max-width: 336px;
 }
 
 .choos__card2-title {
@@ -631,6 +703,11 @@ h6 {
   display: flex;
   justify-content: center;
   gap: 30px;
+  overflow-x: auto;
+}
+
+.projects__imgs::-webkit-scrollbar {
+  width: 0;
 }
 
 .projects__imgs img {
@@ -639,10 +716,12 @@ h6 {
 
 .btn1 {
   background: #6AC9B3;
+  cursor: pointer;
 }
 
 .btn2 {
   background: white;
+  cursor: pointer;
 }
 
 .projects__btns {
@@ -680,8 +759,12 @@ h6 {
 
 .heppy__imgs {
   display: flex;
-  justify-content: center;
+  overflow-x: auto;
   gap: 30px;
+}
+
+.heppy__imgs::-webkit-scrollbar {
+  width: 0;
 }
 
 .heppy__left {
@@ -689,6 +772,7 @@ h6 {
   border-radius: 8px;
   padding: 24px 110px 32px;
   position: relative;
+  min-width: 500px;
 }
 
 .vector1 {
@@ -796,7 +880,8 @@ h6 {
 
 .calculator {
   width: 100%;
-  margin: 110px 0 90px;
+  margin-top: 110px;
+  margin-bottom: 90px;
 }
 
 .calculator__title {
@@ -812,10 +897,25 @@ h6 {
   justify-content: space-between;
 }
 
+@media (max-width: 1320px) {
+
+  .calculator-head {
+    display: block;
+  }
+}  
+
 .calculator__top-left {
-  width: 68%;
+  width: 750px;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 1320px) {
+
+  .calculator__top-left {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .calculator__top-landing {
@@ -859,11 +959,13 @@ h6 {
 }
 
 .i1 {
+  width: 35%;
   height: 4px;
   border-radius: 4px 0 0 4px;
 }
 
 .i2 {
+  width: 65%;
   border-radius: 0 4px 4px 0;
   height: 4px;
 }
@@ -877,11 +979,12 @@ h6 {
   justify-content: center;
   position: absolute;
   top: -14px;
-  left: 260px;
+  left: 35%;
   gap: 3px;
   background: #000;
   border: 1px solid #6AC9B3;
   margin-bottom: 60px;
+  cursor: pointer;
 }
 
 .b1 {
@@ -956,7 +1059,16 @@ h6 {
 .calculator__top-right-top {
   display: flex;
   flex-direction: column;
-  width: 28%;
+  /* width: 28%; */
+  width: 315px;
+}
+
+@media (max-width: 1320px) {
+
+  .calculator__top-right-top {
+    margin-top: 40px;
+    margin: 40px auto 0;
+  }
 }
 
 .calculator__top-right {
@@ -1026,7 +1138,7 @@ h6 {
 .hr2 {
   width: 100%;
   height: 1px;
-  margin-top: 20px;
+  margin-top: 45px;
   background: rgb(138, 136, 136);
 }
 
@@ -1065,9 +1177,13 @@ h6 {
 }
 
 .prices__in {
-  width: 100%;
   display: flex;
   gap: 50px;
+  overflow-x: auto;
+}
+
+.prices__in::-webkit-scrollbar {
+  width: 0;
 }
 
 .prices__card {
@@ -1077,7 +1193,7 @@ h6 {
   align-items: center;
   gap: 25px;
   padding: 10px;
-  width: 30%;
+  min-width: 330px;
   background: #161616;
 }
 
@@ -1088,7 +1204,7 @@ h6 {
   align-items: center;
   gap: 25px;
   padding: 10px;
-  width: 30%;
+  min-width: 330px;
   background: #6AC9B3;
 }
 
@@ -1148,11 +1264,22 @@ h6 {
 
 .prices__image-number {
   margin: 25px 0 28px;
+  display: flex;
+  gap: 6.5px;
 }
 
-.prices__image-number img {
-  width: 70px;
-  height: 33px;
+.prices__dollar img {
+  width: 9px;
+}
+
+.prices__white {
+  color: white;
+  font-size: 30px;
+}
+
+.prices__black {
+  color: black;
+  font-size: 30px;
 }
 
 .prices__bottom {
@@ -1287,6 +1414,7 @@ h6 {
   margin-top: 20px;
   border-radius: 8px;
   text-align: center;
+  cursor: pointer;
 }
 
 
@@ -1302,6 +1430,19 @@ h6 {
   margin: 50px 0 20px;
 }
 
+@media (max-width: 800px) {
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    margin: 50px 0 20px;
+  }
+}
+
 .telegram {
   display: flex;
   gap: 15px;
@@ -1312,6 +1453,7 @@ h6 {
 .telegram p {
   color: white;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .telegram__in {
@@ -1327,6 +1469,7 @@ h6 {
 .telegram__in img {
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 
 .phone1 {
@@ -1350,11 +1493,13 @@ h6 {
 .phone__in1 img { 
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 
 .phone1 p {
   color: white;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .email {
@@ -1378,11 +1523,13 @@ h6 {
 .email__in img {
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 
 .email p {
   color: white;
   font-size: 16px;
+  cursor: pointer;
 }
 
 
